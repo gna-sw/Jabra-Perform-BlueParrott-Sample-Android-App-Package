@@ -1,0 +1,6 @@
+include ':blueparrottsdkaudiosample',
+        ':blueparrottsdkconnectsample',
+        ':blueparrottbatterysample',
+        ':blueparrottbridge',
+        ':blueparrottsdk-release'
+

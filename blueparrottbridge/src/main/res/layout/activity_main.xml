@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#232d35"
+    tools:context="com.blueparrott.blueparrottbridge.BPBridgeActivity"
+    tools:layout_editor_absoluteY="81dp"
+    android:padding="12dp">
+<!--    android:background="#232d35"-->
+
+
+    <RelativeLayout
+        android:id="@+id/llStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectang"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/scScrollView"
+        >
+
+
+        <TextView
+            android:id="@+id/tvLabelHeadsetFriendlyName"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:text="Headset:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            />
+
+        <TextView
+            android:id="@+id/tvHeadsetFriendlyName"
+            android:layout_toRightOf="@id/tvLabelHeadsetFriendlyName"
+            android:layout_alignTop="@id/tvLabelHeadsetFriendlyName"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_height="wrap_content"
+            android:text="No Headset Connected"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            />
+
+        <TextView
+        android:id="@+id/tvLabelSDKStatus"
+            android:layout_below="@id/tvLabelHeadsetFriendlyName"
+        android:layout_width="wrap_content"
+            android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="normal"
+         />
+
+        <TextView
+            android:id="@+id/tvSDKStatus"
+            android:layout_alignTop="@id/tvLabelSDKStatus"
+            android:layout_alignLeft="@id/tvHeadsetFriendlyName"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/button_state_disconnected"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:layout_marginBottom="24dp"
+            />
+
+    </RelativeLayout>
+    <!--  log display -->
+    <ScrollView
+
+        android:id="@+id/scScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectang"
+        app:layout_constraintTop_toBottomOf="@+id/llStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+
+        >
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="top"
+            android:padding="12dp"
+            android:text=""
+
+            android:textColor="#acb4ba"
+            android:textSize="14sp" />
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

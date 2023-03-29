@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Blueparrott Bridge</string>
+
+    <string name="button_state_disconnected">BlueParrott Button disconnected</string>
+    <string name="button_state_connected">BlueParrott Button Connected</string>
+    <string name="button_state_connecting">BlueParrott Button Connecting</string>
+    <string name="button_state_down">BlueParrott Button Pressed</string>
+    <string name="button_state_up">BlueParrott Button Released</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!--pref keys - do not change-->
+    <string name="key_pref_button_up_intent">pref_button_up_intent</string>
+    <string name="key_pref_button_down_intent">pref_button_down_intent</string>
+    <string name="key_pref_button_tap_intent">pref_button_tap_intent</string>
+    <string name="key_pref_button_double_tap_intent">pref_button_double_tap_intent</string>
+    <string name="key_pref_button_long_press_intent">pref_button_long_press_intent</string>
+
+    <!-- intent values - change these to your intents and rebuild - leave blank if not required-->
+    <string name="value_pref_button_up_intent">android.intent.action.PTT.up</string>
+    <string name="value_pref_button_down_intent">android.intent.action.PTT.down</string>
+    <string name="value_pref_button_tap_intent"></string>
+    <string name="value_pref_button_double_tap_intent"></string>
+    <string name="value_pref_button_long_press_intent"></string>
+
+    <string name="key_show_intents">show_intents</string>
+
+</resources>
