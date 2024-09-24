@@ -1,16 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.blueparrott.blueparrottbridge"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 34
         versionCode 1
-        versionName "100.1"
+        versionName "100.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("boolean", "USE_PREF_INTENTS", "true");// use the user-set prefs, or the harcoded ones
+        buildConfigField("boolean", "USE_PREF_INTENTS", "true")
     }
 
     buildTypes {

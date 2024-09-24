@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements IBPHeadsetListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         //set up the UI elements
         setContentView(R.layout.activity_main);
 
@@ -90,6 +91,9 @@ public class MainActivity extends AppCompatActivity implements IBPHeadsetListene
         tvLog = findViewById(R.id.tvLog);
         tvLog.setMovementMethod(new ScrollingMovementMethod());
         scScrollView = (ScrollView) this.findViewById(R.id.scScrollView);
+
+        //optionally set customer UUID obtained from BP/GN Developer programme
+        BPSdk.setCustomerUUID("4bcf295c-587b-11ee-8c99-0242ac120002");
 
         //Get handle to the blueparrott SDK and create a listener for headset events
         headsetSdk = (BPHeadset) BPSdk.getBPHeadset(this);

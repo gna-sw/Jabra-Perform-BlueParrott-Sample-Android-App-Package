@@ -1,5 +1,6 @@
 package com.blueparrott.blueparrottbridge;
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -22,6 +23,7 @@ public class Utils {
     /*
      * Check if there is a BT headset connected
      */
+    @SuppressLint("MissingPermission")
     static boolean isBluetoothHeadsetConnected() {
         try {
             return BluetoothAdapter.getDefaultAdapter().getProfileConnectionState(android.bluetooth.BluetoothProfile.HEADSET) == android.bluetooth.BluetoothProfile.STATE_CONNECTED;

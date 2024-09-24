@@ -97,6 +97,9 @@ public class BPBridgeActivity extends AppCompatActivity implements IBPHeadsetLis
             }
         });
 
+        //optionally set customer UUID obtained from BP/GN Developer programme
+        BPSdk.setCustomerUUID("4bcf295c-587b-11ee-8c99-0242ac120002");
+
         //Get handle to the blueparrott SDK and create a listener for headset events
         headsetSdk = (BPHeadset) BPSdk.getBPHeadset(this);
         headsetSdk.addListener(this);

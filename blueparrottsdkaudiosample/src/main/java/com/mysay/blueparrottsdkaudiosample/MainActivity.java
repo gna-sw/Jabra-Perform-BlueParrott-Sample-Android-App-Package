@@ -23,6 +23,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
+import com.blueparrott.blueparrottsdk.BPSdk;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -161,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+
+        //optionally set customer UUID obtained from BP/GN Developer programme
+        BPSdk.setCustomerUUID("4bcf295c-587b-11ee-8c99-0242ac120002");
 
     }
 

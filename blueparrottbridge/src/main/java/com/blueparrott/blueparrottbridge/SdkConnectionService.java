@@ -1,5 +1,7 @@
 package com.blueparrott.blueparrottbridge;
 
+import static com.blueparrott.blueparrottsdk.BPHeadsetListener.PARROTT_BUTTON;
+
 import android.app.Notification;
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
@@ -114,7 +116,7 @@ public class SdkConnectionService extends Service implements IBPHeadsetListener 
         headsetSdk = (BPHeadset) BPSdk.getBPHeadset(this);
 
         //send analytics - in dev mode
-        BPSdk.setSendAnalytics(true);
+        BPSdk.setRemoteLogging(true);
 
         //listen for headset events
         headsetSdk.addListener(SdkConnectionService.this);
@@ -176,37 +178,44 @@ public class SdkConnectionService extends Service implements IBPHeadsetListener 
 
     @Override
     public void onButtonDown(int buttonId) {
-
-        //Let User know button has been pressed by updating the notification bar
-        Utils.createNotification(this, BUTTON_STATE_DOWN);
+        if (buttonId == PARROTT_BUTTON){//ignore MFB events
+            //Let User know button has been pressed by updating the notification bar
+            Utils.createNotification(this, BUTTON_STATE_DOWN);
 
         //broadcast intent from prefs (optional, if applicable)
         sendButtonIntentFromPref(getString(R.string.key_pref_button_down_intent), getString(R.string.value_pref_button_down_intent));
+        }
 
     }
 
     @Override
     public void onButtonUp(int buttonId) {
-
-        Utils.createNotification(this, BUTTON_STATE_UP);
-
-        sendButtonIntentFromPref(getString(R.string.key_pref_button_up_intent), getString(R.string.value_pref_button_up_intent));
+        if (buttonId == PARROTT_BUTTON) {//ignore MFB events
+            Utils.createNotification(this, BUTTON_STATE_UP);
+            sendButtonIntentFromPref(getString(R.string.key_pref_button_up_intent), getString(R.string.value_pref_button_up_intent));
+        }
     }
 
 
     @Override
     public void onTap(int buttonId) {
+        if (buttonId == PARROTT_BUTTON) {//ignore MFB events
             sendButtonIntentFromPref(getString(R.string.key_pref_button_tap_intent), getString(R.string.value_pref_button_tap_intent));
+        }
     }
 
     @Override
     public void onDoubleTap(int buttonId) {
+        if (buttonId == PARROTT_BUTTON) {//ignore MFB events
             sendButtonIntentFromPref(getString(R.string.key_pref_button_double_tap_intent), getString(R.string.value_pref_button_double_tap_intent));
+        }
     }
 
     @Override
     public void onLongPress(int buttonId) {
+        if (buttonId == PARROTT_BUTTON) {//ignore MFB events
             sendButtonIntentFromPref(getString(R.string.key_pref_button_long_press_intent), getString(R.string.value_pref_button_long_press_intent));
+        }
     }
 
     @Override
