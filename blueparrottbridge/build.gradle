@@ -24,7 +24,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.blueparrott:blueparrottsdk:+'
 
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.navigation:navigation-fragment:2.5.2'
@@ -37,7 +37,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation project(path: ':blueparrottsdk-release')
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0';
 

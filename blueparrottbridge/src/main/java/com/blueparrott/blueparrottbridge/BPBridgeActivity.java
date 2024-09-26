@@ -249,6 +249,11 @@ public class BPBridgeActivity extends AppCompatActivity implements IBPHeadsetLis
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
 
     /*
      * Log progress to the to Screen

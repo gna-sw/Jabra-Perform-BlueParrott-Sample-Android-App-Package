@@ -215,6 +215,11 @@ public class MainActivity extends AppCompatActivity implements IBPHeadsetListene
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
 
     /*
      * Log progress to the to Screen

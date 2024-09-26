@@ -233,6 +233,11 @@ public class SdkConnectionService extends Service implements IBPHeadsetListener 
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
 
     //broadcast intent - use either the default blueparrott intent or custom intent stored in prefs
     private void sendButtonIntentFromPref(String prefKey, String defaultIntentValue) {

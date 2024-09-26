@@ -201,6 +201,11 @@ public class SdkConnectionService extends Service implements IBPHeadsetListener 
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
     /*
      * Detect Bluetooth Headset State change, so we can trigger connection to the BlueParrott Headset SDK when a headset connects
      */

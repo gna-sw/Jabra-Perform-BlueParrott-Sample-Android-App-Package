@@ -350,6 +350,11 @@ public class RecPlayAudioService extends Service implements IBPHeadsetListener {
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
 
     /*
      * Setup receiver to be notified when bluetooth connect/disconnect received so we can adjust the audio settings

@@ -22,13 +22,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.blueparrott:blueparrottsdk:+'
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    implementation project(path: ':blueparrottsdk-release')
-
 }
 
 

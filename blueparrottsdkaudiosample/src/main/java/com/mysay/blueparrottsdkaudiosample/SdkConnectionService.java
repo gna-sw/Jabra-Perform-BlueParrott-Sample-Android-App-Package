@@ -173,6 +173,11 @@ public class SdkConnectionService extends Service implements IBPHeadsetListener 
 
     }
 
+    @Override
+    public void onHeadsetLogChange(String log) {
+
+    }
+
 
 
     /*
